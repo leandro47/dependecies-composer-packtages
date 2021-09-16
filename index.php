@@ -3,18 +3,15 @@
 require_once "vendor/autoload.php";
 
 use GuzzleHttp\Client;
+use Leandro47\FetchCursesAlura\FetchCurses;
 use Symfony\Component\DomCrawler\Crawler;
 
-$client = new Client();
-$response = $client->request('GET', 'https://www.alura.com.br/cursos-online-programacao');
-
-$html = $response->getBody();
-
+$client = new Client(['base_uri' => 'https://www.alura.com.br/']);
 $crawler = new Crawler();
-$crawler->addHtmlContent($html);
 
-$curses = $crawler->filter('span.card-curso__nome');
+$fetchCurses = new FetchCurses($client, $crawler);
+$curses = $fetchCurses->fetch('cursos-online-programacao');
 
 foreach ($curses as $curse) {
-    echo $curse->textContent . PHP_EOL;
+    echo $curse . PHP_EOL;
 }
