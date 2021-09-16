@@ -1,0 +1,16 @@
+{
+    "name": "leandro47/get-curse-alura",
+    "description": "Busca os cursos dentro do site da alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "leandro47",
+            "email": "leandrosilva47@live.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^5.3"
+    }
+}
