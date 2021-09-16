@@ -12,6 +12,5 @@ $crawler = new Crawler();
 $fetchCurses = new FetchCurses($client, $crawler);
 $curses = $fetchCurses->fetch('cursos-online-programacao');
 
-foreach ($curses as $curse) {
-    echo $curse . PHP_EOL;
-}
+Utils::dumpForeach($curses);
+test();
