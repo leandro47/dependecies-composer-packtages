@@ -2,6 +2,7 @@
     "name": "leandro47/get-curse-alura",
     "description": "Busca os cursos dentro do site da alura",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "leandro47",
